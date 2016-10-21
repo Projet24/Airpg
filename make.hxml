@@ -1,0 +1,9 @@
+# // make.hxml
+-lib hxnodejs
+-lib js-kit
+-lib thx.promise
+-main com.p24studio.airpg.test.NodeMain
+-js server.js
+-D
+js-es5
+-cmd node server.js
