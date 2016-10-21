@@ -48,7 +48,13 @@ Airpg
 
 # TODO
 
-* Make it work
+* The fighting part
+* XP and leveling
+* Front-end
+* Authentication
+* Game Design (More Monsters!)
+* Get rid of haxe-js-kit
+* Multilanguage
 
 # Developer's Notes
 
