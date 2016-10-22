@@ -72,15 +72,22 @@ class NodeMain {
                 res.sendfile(Node.__dirname + '/public/index.html');
             });
 
-            app.post('/login', Passport.authenticate('local', {}), function(req, res) {
+//            app.post('/login', Passport.authenticate('local', {}), function(req, res) { // TODO
+            app.post('/login', function(req, res) {
                 // res.sendfile(Node.__dirname + '/public/auth/index.html');
                 res.redirect('/airpg');
+            });
+
+            app.get('/resources/:resource', function(req, res) {
+                res.sendfile(Node.__dirname + '/public/auth/resources/'+req.params.resource);
             });
 
             app.get('/airpg',
             function (req, res) {
                 res.sendfile(Node.__dirname + '/public/auth/index.html');
             });
+
+
 
             /** SOCKETS */
             io.on('connection', function (socket) {
