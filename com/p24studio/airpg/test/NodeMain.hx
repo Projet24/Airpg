@@ -11,7 +11,6 @@ import thx.Result;
 
 import com.p24studio.airpg.main.domain.*;
 import com.p24studio.airpg.main.service.*;
-
 import com.p24studio.airpg.main.constants.*;
 
 using Lambda;
@@ -127,9 +126,12 @@ class NodeMain {
         }
 
         static function demoFighter(db:Database) {
+
             AdventurerDAO.find(db, "new@zilot.ddns.com").success(function(character: Adventurer) {
                 MonsterTypeDAO.findAll(db).success(function(monsterTypes: Array<MonsterType>) {
                     var monster = new Monster();
+                    var fight = new Fight(character, monster);
+
                     monster.initializeWithType(monsterTypes[3]);
                     character.attack(monster);
                 });
