@@ -48,13 +48,24 @@ Airpg
 
 # TODO
 
-* The fighting part
-* XP and leveling
-* Front-end
-* Authentication
-* Game Design (More Monsters!)
-* Get rid of haxe-js-kit
-* Multilanguage
+* Server side
+	* The fighting part
+	* XP and leveling
+	* Authentication
+	* Get rid of haxe-js-kit
+* Client side
+	* Unauthenticated Page
+	* Socket connection
+	* Character's stats choice
+	* Player's Page
+	* Multilanguage
+	* AngularJS ?
+
+* Game Design
+	* Biome system
+	* More monsters!
+
+
 
 # Developer's Notes
 
