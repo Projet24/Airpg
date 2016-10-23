@@ -53,6 +53,7 @@ Airpg
 	* XP and leveling
 	* Authentication
 	* Get rid of haxe-js-kit
+	* Haxe unit testing
 * Client side
 	* Unauthenticated Page
 	* Socket connection
