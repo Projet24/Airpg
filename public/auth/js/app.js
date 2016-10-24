@@ -9,7 +9,7 @@ app.config(function($routeProvider) {
 });
 
 app.factory('socket', function ($rootScope) {
-    var socket = io("http://localhost:8089");
+    var socket = io();
     return {
         on: function (eventName, callback) {
             socket.on(eventName, function () {

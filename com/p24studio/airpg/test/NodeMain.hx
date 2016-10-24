@@ -86,6 +86,10 @@ class NodeMain {
                 res.sendfile(Node.__dirname + '/public/auth/js/'+req.params.js);
             });
 
+            app.get('/css/:css', function(req, res) {
+                res.sendfile(Node.__dirname + '/public/auth/css/'+req.params.css);
+            });
+
             app.get('/lib/:lib', function(req, res) {
                 res.sendfile(Node.__dirname + '/public/auth/lib/'+req.params.lib);
             });
