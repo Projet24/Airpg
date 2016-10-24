@@ -82,6 +82,14 @@ class NodeMain {
                 res.sendfile(Node.__dirname + '/public/auth/resources/'+req.params.resource);
             });
 
+            app.get('/js/:js', function(req, res) {
+                res.sendfile(Node.__dirname + '/public/auth/js/'+req.params.js);
+            });
+
+            app.get('/lib/:lib', function(req, res) {
+                res.sendfile(Node.__dirname + '/public/auth/lib/'+req.params.lib);
+            });
+
             app.get('/airpg',
             function (req, res) {
                 res.sendfile(Node.__dirname + '/public/auth/index.html');
@@ -91,8 +99,10 @@ class NodeMain {
 
             /** SOCKETS */
             io.on('connection', function (socket) {
-                socket.emit('message', { message: 'welcome to the chat' });
-                socket.on('ping', function (data) {
+                trace("New connection");
+                socket.emit('server_message', { message: 'Welcome' });
+                socket.on('client_ping', function (data) {
+                    trace("Ping received, emitting pong...");
                     io.sockets.emit('pong', data);
                 });
             });
