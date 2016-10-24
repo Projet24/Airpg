@@ -2,9 +2,9 @@ var app = angular.module('app',['ngRoute']);
 
 app.config(function($routeProvider) {
     $routeProvider
-    .when("/", {
-        templateUrl: "index.html",
-        controller: "IndexCtrl"
+    .when("/airpg", {
+        templateUrl: "ng-templates/introduction.html",
+        controller: "IntroCtrl"
     });
 });
 
@@ -30,34 +30,4 @@ app.factory('socket', function ($rootScope) {
             })
         }
     };
-});
-
-app.controller("IntroCtrl", function($scope, socket) {
-    // Socket listeners
-    // ================
-    socket.on('server_message', function(data) {
-        console.log(data.message);
-    });
-
-    socket.emit('client_ping', {
-        startTime: new Date()
-    });
-
-
-
-    // Internal functions
-    // ==================
-    var internalVar = "";
-
-    var internalFunction = function() {
-        return true;
-    }
-
-    // Methods published to the scope
-    // ==============================
-    $scope.email = "default@zilot.ddns.net";
-
-    $scope.angularFunction = function() {
-        internalFunction();
-    }
 });

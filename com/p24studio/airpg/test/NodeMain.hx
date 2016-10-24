@@ -86,6 +86,14 @@ class NodeMain {
                 res.sendfile(Node.__dirname + '/public/auth/js/'+req.params.js);
             });
 
+            app.get('/js/ng-templates/:template', function(req, res) {
+                res.sendfile(Node.__dirname + '/public/auth/js/ng-templates/'+req.params.template);
+            });
+
+            app.get('/js/controllers/:controller', function(req, res) {
+                res.sendfile(Node.__dirname + '/public/auth/js/controllers/'+req.params.controller);
+            });
+
             app.get('/css/:css', function(req, res) {
                 res.sendfile(Node.__dirname + '/public/auth/css/'+req.params.css);
             });
@@ -98,8 +106,6 @@ class NodeMain {
             function (req, res) {
                 res.sendfile(Node.__dirname + '/public/auth/index.html');
             });
-
-
 
             /** SOCKETS */
             io.on('connection', function (socket) {
