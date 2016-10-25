@@ -1,4 +1,4 @@
-app.controller("IntroCtrl", function($scope, socket) {
+app.controller("HomeCtrl", function($scope, socket) {
     // Socket listeners
     // ================
 
@@ -7,6 +7,6 @@ app.controller("IntroCtrl", function($scope, socket) {
 
     // Methods published to the scope
     // ==============================
-    $scope.isLoaded = "IntroLoaded";
+    $scope.isLoaded = "HomeLoaded";
 
 });

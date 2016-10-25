@@ -31,160 +31,8 @@
 </head>
 
 <body id="page-top" class="index" ng-controller="MainCtrl as main">
-    <div ng-controller="IntroCtrl">
-        <!-- Navigation -->
-        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom affix-top">
-            <div class="container">
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="#page-top">Airpg</a>
-                </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="hidden active">
-                            <a href="#page-top"></a>
-                        </li>
-                        <li class="page-scroll">
-                            <a href="#briefing">Briefing</a>
-                        </li>
-                        <li class="page-scroll">
-                            <a href="#character-creation">Moi</a>
-                        </li>
-                        <li class="page-scroll">
-                            <a href="#go">À l'Aventure !</a>
-                        </li>
-                        <li class="page-scroll">
-                            <a href="#disconnect">Changer d'avis</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-        </nav>
-
-        <!-- Header -->
-        <header>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <img class="img-responsive" src="resources/profile.png" alt="">
-                        <div class="intro-text">
-                            <span class="name">SGT Tuth Oriel</span>
-                            <hr class="star-light">
-                            <span class="skills">Ohoh, un nouvel aventurier ! {{email}}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- Briefing Section -->
-        <section class="success" id="briefing">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2>Briefing</h2>
-                        <hr class="star-light">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-lg-offset-2">
-                        <p>Bienvenue dans le monde de Airpg. Je me présente, je suis le Sergent Tuth Oriel. Un mal ancien se réveille, vous allez devoir sauver le royaume en affrontant plein de monstres, de plus en plus forts.</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <p>Vous pouvez commencer par répartir vos points de caractéristiques, qui détermineront les atouts de votre personnage. Il y en a 4, à vous de trouver le bon équilibre.</p>
-                    </div>
-                    <div class="col-lg-3 col-lg-offset-2 text-center">
-    					<a href="#character-creation" class="btn btn-lg btn-outline">
-    						<i class="fa fa-download"></i> Personnaliser mon personnage
-    					</a>
-                    </div>
-    				<div class="col-lg-3 col-lg-offset-1 text-center">
-    					<a href="#go" class="btn btn-lg btn-outline">
-    						<i class="fa fa-download"></i> Passer directement à l'aventure
-    					</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Character Creation Section -->
-        <section id="character-creation">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2>Caractéristiques</h2>
-                        <hr class="star-primary">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-3 portfolio-item">
-    					<img src="resources/strength.png" class="img-responsive" alt="Force">
-                    </div>
-                    <div class="col-sm-3 portfolio-item">
-    					<img src="resources/agility.png" class="img-responsive" alt="Agilité">
-                    </div>
-                    <div class="col-sm-3 portfolio-item">
-    					<img src="resources/constitution.png" class="img-responsive" alt="Constitution">
-                    </div>
-                    <div class="col-sm-3 portfolio-item">
-    					<img src="resources/wisdom.png" class="img-responsive" alt="Sagesse">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Go Section -->
-        <section id="go">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2>À l'aventure !</h2>
-                        <hr class="star-primary">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <div class="col-lg-4 col-lg-offset-3"><button type="submit" class="btn btn-success btn-lg">Hyppolyte*, prépare vite mon cheval !</button></div>
-    						</div>
-    						<div class="form-group col-xs-12">
-    							<p>*Personnage totalement imaginaire, vous n'avez jamais eu d'écuyer.</p>
-    						</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="text-center">
-
-            <div class="footer-below">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            Copyright © P24 Studio - 2016
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-        <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
-            <a class="btn btn-primary" href="#page-top">
-                <i class="fa fa-chevron-up"></i>
-            </a>
-        </div>
-
-    </div>
+    <ng-view></ng-view>
 
     <!-- jQuery -->
     <script src="lib/jquery_002.js"></script>
@@ -206,6 +54,7 @@
 
     <!-- Controllers -->
     <script src="js/controllers/MainCtrl.js"></script>
+    <script src="js/controllers/HomeCtrl.js"></script>
     <script src="js/controllers/IntroCtrl.js"></script>
 
 

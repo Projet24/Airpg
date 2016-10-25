@@ -86,8 +86,8 @@ class NodeMain {
                 res.sendfile(Node.__dirname + '/public/auth/js/'+req.params.js);
             });
 
-            app.get('/js/ng-templates/:template', function(req, res) {
-                res.sendfile(Node.__dirname + '/public/auth/js/ng-templates/'+req.params.template);
+            app.get('/ng-templates/:template', function(req, res) {
+                res.sendfile(Node.__dirname + '/public/auth/ng-templates/'+req.params.template);
             });
 
             app.get('/js/controllers/:controller', function(req, res) {

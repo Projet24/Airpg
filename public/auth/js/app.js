@@ -2,7 +2,11 @@ var app = angular.module('app',['ngRoute']);
 
 app.config(function($routeProvider) {
     $routeProvider
-    .when("/airpg", {
+    .when("/", {
+        templateUrl: "ng-templates/home.html",
+        controller: "HomeCtrl"
+    })
+    .when("/introduction", {
         templateUrl: "ng-templates/introduction.html",
         controller: "IntroCtrl"
     });
