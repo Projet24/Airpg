@@ -29,8 +29,8 @@ class NodeMain {
         var db = new Database("sqlite.db"); // TODO put the db name in config file
 
         initializeDatabase(db);
-        demoDatabase(db);
-        demoFighter(db);
+        // demoDatabase(db);
+        // demoFighter(db);
 
         /** Authentication **/
         var ensureLoggedIn = ConnectEnsureLogin.ensureLoggedIn();
