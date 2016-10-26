@@ -1,4 +1,4 @@
-app.controller("HomeCtrl", function($scope, socket) {
+app.controller("HomeCtrl", function($scope, $route, $location, socket) {
     // Socket listeners
     // ================
 
@@ -8,5 +8,6 @@ app.controller("HomeCtrl", function($scope, socket) {
     // Methods published to the scope
     // ==============================
     $scope.isLoaded = "HomeLoaded";
+
 
 });

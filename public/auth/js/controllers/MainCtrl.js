@@ -1,4 +1,4 @@
-app.controller("MainCtrl", function($scope, socket) {
+app.controller("MainCtrl", function($scope, $route, $location, socket) {
     // Socket listeners
     // ================
     socket.on('server_message', function(data) {
@@ -19,11 +19,13 @@ app.controller("MainCtrl", function($scope, socket) {
         return true;
     }
 
+
+
     // Methods published to the scope
     // ==============================
     $scope.email = "default@zilot.ddns.net";
 
-    $scope.angularFunction = function() {
-        internalFunction();
-    }
+    $scope.displayNav = function() {
+        return $location.url() != '/introduction';
+    };
 });

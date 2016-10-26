@@ -1,4 +1,4 @@
-app.controller("IntroCtrl", function($scope, socket) {
+app.controller("IntroCtrl", function($scope, $route, $location, socket) {
     // Socket listeners
     // ================
 
@@ -8,5 +8,9 @@ app.controller("IntroCtrl", function($scope, socket) {
     // Methods published to the scope
     // ==============================
     $scope.isLoaded = "IntroLoaded";
+
+    $scope.makeCharacter = function() {
+        $location.url('/airpg');
+    };
 
 });
