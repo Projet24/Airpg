@@ -60,7 +60,7 @@ Airpg
 	* Character's stats choice
 	* Player's Page
 	* Multilanguage
-	* AngularJS ?
+	* Animated smooth scroll on anchor
 
 * Game Design
 	* Biome system
